@@ -2,7 +2,7 @@
 
 ## Working on your project
 
-To work on your project, clone your repository and start working locally. **DO NOT push data or model weights to GitHub** as these are protected by privacy laws. You can add files that you do not want to consider for commits to your repository's `.gitignore` to ensure they are not included in your commits automatically. Each repository should include a `README` file that 
+To work on your project, clone your repository and start working locally. **DO NOT push data or model weights to GitHub** as these are protected by privacy laws. You can add files that you do not want to consider for commits to your repository's `.gitignore` to ensure they are not included in your commits automatically. Each repository should include a `README` file that includes how to run your repository as well as how to run the tests.
 
 ## General rules
 
@@ -149,3 +149,21 @@ Design classes to encapsulate objects and behavior. Ensure these are precise and
 
 We will use the Google Style Guide for programming conventions: https://google.github.io/styleguide/ (Python: https://google.github.io/styleguide/pyguide.html).
 Please ensure you are using this throughout to have a coherent and homogenous codebase.
+
+## Using VCS
+
+We (obviously) use git for version control. Because this is a large project, we can't just all work in the main branch and solve conflicts as we go. Some basic rules:
+
+### Working on your branch
+
+By default, do not touch a branch that is not yours without the branch owner's permission/consent.
+
+Beginner level:
+- Have a branch with your name as name and perform commits to it. When you want to merge to main, create a pull request (PR) to main and wait for it to be approved by at least one of your fellow repository contributors to merge to main. Please do not break anything when merging to main, rewriting commit histories is not easy!
+
+Advanced level:
+- You can have branches for each feature you are trying to implement. Follow the abovementioned procedure to merge changes into main via PRs.
+
+### Commits
+
+Write useful, concise and informative commit messages. Have a commit for each action you try to do. For example, if you fix bug X and add feature Y, instead of writing a commit with message: *Fixed bug X and added feature Y*, write two commits encapsulating each change thematically: *Fixed bug X* and *Added feature Y*. This allows for finer granularity, for example if I only need bug X fixed and do not want feature Y, I can cherry-pick the first commit in the latter scenario, but not in the first.
