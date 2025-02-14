@@ -150,6 +150,33 @@ Design classes to encapsulate objects and behavior. Ensure these are precise and
 We will use the Google Style Guide for programming conventions: https://google.github.io/styleguide/ (Python: https://google.github.io/styleguide/pyguide.html).
 Please ensure you are using this throughout to have a coherent and homogenous codebase.
 
+The most important things:
+- Install Black formatter (this is a VSCode extension, enabling format on save is recommended).
+- We will use snake_case for variables, functions, methods and CamelCase for class names (snake case means we_write_like_this and camel case means weWriteLikeThis).
+- Use typing whenever possible: this is a rich way of easing the process of reading/understanding code and avoiding errors. Here's an example:
+
+```
+def sum(a:int, b: int) -> int:
+   return a+b
+```
+- Use documentation on each method and function. We will follow the conventions showed in the example below:
+
+ ```
+def sum(a:int, b:int) -> int:
+"""
+Adds a and b.
+
+Args:
+   - a (int): number to add
+   - b (int): number to add
+
+Returns:
+   - Sum of both numbers (int)
+"""
+   return a+b
+```
+- Add comments if you think the code isn't self-explanatory. Comments should be concise and useful to another programmer that did not code the function but has to use it.
+
 ## Using VCS
 
 We (obviously) use git for version control. Because this is a large project, we can't just all work in the main branch and solve conflicts as we go. Some basic rules:
